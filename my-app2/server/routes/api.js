@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
       res.status(400).send("Error");
     }
     else{
-      return res.status(200).send(rows);
+      return res.send(rows);
     }
   	});	
 });
