@@ -9,7 +9,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  
 
   rows: any = [];
 

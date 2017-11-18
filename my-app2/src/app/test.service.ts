@@ -7,7 +7,11 @@ export class TestService {
 
   constructor(private http: Http) { }
 
-  getUser(){
-  	return this.http.get('/api').map(res => res.json());
+  getUser() {
+    return this.http.get('/api').map(res => res.json());
+  }
+
+  getOrdenes() {
+    return this.http.get('/api/orden').map(res => res.json());
   }
 }
