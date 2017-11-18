@@ -15,23 +15,23 @@ export class OrdenesComponent implements OnInit {
 
   ngOnInit() {
     this.testService.getOrdenes().subscribe(rows => {
-		for(let i = 0;i<rows.length;i++){
-			console.log(rows[i]);
-		}
+      for (let i = 0; i < rows.length; i++) {
+        console.log(rows[i]);
+      }
     });
   }
 
   crearOrden() {
     return this.http.post('/api/crearOrden/', { descripcion: this.descripcion })
-      .subscribe((response: Response) => {
-        console.log(response)
+      .subscribe((res: Response) => {
+        console.log(res)
         try {
-          let resp = response.json().body.result;
-          alert('Solicitud enviada correctamente');
+          let response = res.json().body.result;
+          alert(response);
         }
         catch (err) {
           console.log(err)
-          alert("error")
+          alert("Error")
         }
       })
   }
