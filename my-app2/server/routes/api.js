@@ -6,7 +6,7 @@ const path = require('path')
 
 //Add Sequelize as ORM //
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('test', 'root', 'admin',{
+const sequelize = new Sequelize('test', 'root', '1234',{//bd,user,pass
 	host: 'localhost',
 	dialect: 'mysql',
 	pool: {
@@ -34,12 +34,19 @@ sequelize.authenticate().then(() =>	{
 
 // Import User Models
 
-const Usuario = sequelize.import('usuario', require("../models/usuarios"));
+const Usuario = sequelize.import('usuarios', require("../models/usuarios"));
+const Orden = sequelize.import('ordenes', require("../models/ordenes"));
 
 /* GET api listing. */
 router.get('/', (req, res) => {
   Usuario.findAll().then(users => {
     res.status(200).send(users);
+  })
+});
+
+router.get('/orden', (req, res) => {
+  Orden.findAll().then(ordenes => {
+    res.status(200).send(ordenes);
   })
 });
 
