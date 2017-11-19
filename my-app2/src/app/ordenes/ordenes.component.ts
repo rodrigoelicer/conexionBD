@@ -26,6 +26,7 @@ export class OrdenesComponent implements OnInit {
         console.log(res)
         try {
           let response = res.json().body.result;
+          this.ngOnInit();
           alert(response);
         }
         catch (err) {
