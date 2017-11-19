@@ -10,14 +10,13 @@ import { Http, Response } from '@angular/http';
 export class OrdenesComponent implements OnInit {
 
   descripcion = "test";
+  rows: any = [];
 
   constructor(private testService: TestService, private http: Http) { }
 
   ngOnInit() {
     this.testService.getOrdenes().subscribe(rows => {
-      for (let i = 0; i < rows.length; i++) {
-        console.log(rows[i]);
-      }
+      this.rows = rows;
     });
   }
 

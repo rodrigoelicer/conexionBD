@@ -6,7 +6,7 @@ const path = require('path')
 
 //Add Sequelize as ORM //
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('test', 'root', '1234', { //bd,user,pass
+const sequelize = new Sequelize('test', 'root', 'admin', { //bd,user,pass
   host: 'localhost',
   dialect: 'mysql',
   pool: {

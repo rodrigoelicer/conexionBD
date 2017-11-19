@@ -2,6 +2,14 @@
 	ordenes works!
 </p>
 
+<table>
+	<tr *ngFor = "let row of rows">
+		<th>{{ row.idordenes }}</th>
+		<th>{{ row.descripcion }}</th>
+		<th>{{ row.fecha }}</th>
+	</tr>
+</table>
+
 <form method="POST" (ngSubmit)="crearOrden()">
 	descripcion <input type="text" name="descripcion" [(ngModel)]="descripcion">
 	<button type="submit">Submit</button>
