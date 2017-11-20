@@ -9,11 +9,13 @@ import { AboutComponent } from './about/about.component';
 
 import { TestService } from './test.service';
 import { OrdenesComponent } from './ordenes/ordenes.component';
+import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    OrdenesComponent
+    OrdenesComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

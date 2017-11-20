@@ -9,7 +9,7 @@ import { Http, Response } from '@angular/http';
 })
 export class OrdenesComponent implements OnInit {
 
-  descripcion = "test";
+  descripcion = "";
   rows: any = [];
 
   constructor(private testService: TestService, private http: Http) { }
